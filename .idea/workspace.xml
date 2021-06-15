@@ -77,7 +77,7 @@
       <workItem from="1623732189628" duration="363000" />
       <workItem from="1623754053316" duration="1293000" />
       <workItem from="1623764208069" duration="701000" />
-      <workItem from="1623765078776" duration="769000" />
+      <workItem from="1623765078776" duration="1096000" />
     </task>
     <task id="LOCAL-00001" summary="added gitignore">
       <created>1623754623269</created>
@@ -135,7 +135,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623765820396</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="git ignore">
+      <created>1623765893614</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1623765893614</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,12 +166,12 @@
     </ignored-roots>
     <MESSAGE value="added gitignore" />
     <MESSAGE value="added project" />
-    <MESSAGE value="git ignore" />
     <MESSAGE value="delete gitignore" />
     <MESSAGE value="ignore venv folder in gitignore" />
     <MESSAGE value="ignore db in gitignore" />
     <MESSAGE value="add project" />
     <MESSAGE value="add gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="add gitignore" />
+    <MESSAGE value="git ignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="git ignore" />
   </component>
 </project>

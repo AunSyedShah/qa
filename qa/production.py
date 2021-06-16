@@ -3,7 +3,7 @@ import os
 
 # Configure the domain name using the environment variable
 # that Azure automatically creates for us.
-ALLOWED_HOSTS = "*"
+ALLOWED_HOSTS = ["https://qavu.azurewebsites.net", "https://qavu.azurewebsites.net", "qavu.azurewebsites.net"]
 
 # WhiteNoise configuration
 MIDDLEWARE = [

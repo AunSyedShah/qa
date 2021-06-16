@@ -2,6 +2,5 @@ venv/
 db.sqlite3
 .idea/
 __pychache__/
-/qa/settings.py
 /qa/__init__.py
 .github/

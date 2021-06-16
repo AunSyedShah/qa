@@ -3,4 +3,3 @@ db.sqlite3
 .idea/
 __pychache__/
 /qa/__init__.py
-.github/

@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if questions %}
+        <label for="myInput">Enter Keywords</label>
+        <input class="form-control" id="userInputSearch" type="text" placeholder="Search..">
+        <br>
+        <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Question</th>
+            <th>Answer</th>
+            <th>Course Code</th>
+            <th>Page Number</th>
+        </tr>
+        </thead>
+
+        <tbody id="questions">
+        {% for qusetion in questions %}
+            <tr>
+                <td>{{ qusetion.question }}</td>
+                <td>{{ qusetion.option }}</td>
+                <td>{{ qusetion.course_code }}</td>
+                <td>{{ qusetion.page_number }}</td>
+            </tr>
+        {% endfor %}
+        {% else %}
+        <h3>No Questions in database yet</h3>
+        </tbody>
+    {% endif %}
+</table>
+{% endblock content %}
+{% block script %}
+    <script>
+        $(document).ready(function () {
+            $("#userInputSearch").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#questions tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+{% endblock %}

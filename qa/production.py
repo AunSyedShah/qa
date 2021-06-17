@@ -7,8 +7,8 @@ ALLOWED_HOSTS = ["qavu.azurewebsites.net"]
 
 # WhiteNoise configuration
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -16,8 +16,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # DBHOST is only the server name, not the full URL
 hostname = os.environ['DBHOST']
@@ -33,4 +31,6 @@ DATABASES = {
         'PASSWORD': os.environ['DBPASS']
     }
 }
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'static'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-e5w$6hz^8=o4mcqx%536tsnhnzr(to)&40m@n^z@8eq@-vpo#%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ["qavu.azurewebsites.net"]
+ALLOWED_HOSTS = ["qavu.azurewebsites.net", "*"]
 # Application definition
 
 INSTALLED_APPS = [
@@ -120,4 +120,5 @@ USE_TZ = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = BASE_DIR / 'static'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
